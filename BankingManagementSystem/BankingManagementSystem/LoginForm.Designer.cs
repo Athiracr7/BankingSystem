@@ -36,6 +36,7 @@
             Password = new Label();
             UserName = new Label();
             label1 = new Label();
+            label2 = new Label();
             LoginPanel.SuspendLayout();
             SuspendLayout();
             // 
@@ -88,8 +89,8 @@
             txtpswd.Size = new Size(180, 27);
             txtpswd.TabIndex = 4;
             txtpswd.Text = "Password";
-            txtpswd.TextChanged += textBox1_TextChanged;
             txtpswd.UseSystemPasswordChar = true;
+            txtpswd.TextChanged += textBox1_TextChanged;
             // 
             // txtusername
             // 
@@ -133,12 +134,24 @@
             label1.Text = "Login to Your Account";
             label1.Click += label1_Click;
             // 
+            // label2
+            // 
+            label2.Dock = DockStyle.Top;
+            label2.ForeColor = Color.DarkOrange;
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(800, 45);
+            label2.TabIndex = 1;
+            label2.Text = "BANKING MANAGEMENT SYSTEM";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaptionText;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(LoginPanel);
             Name = "LoginForm";
             Text = "LoginForm";
@@ -157,5 +170,6 @@
         private TextBox txtusername;
         private Button Login;
         private LinkLabel linkLabel1;
+        private Label label2;
     }
 }
